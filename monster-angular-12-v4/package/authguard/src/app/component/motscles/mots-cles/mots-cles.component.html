@@ -1,0 +1,35 @@
+<div>
+  <h1>Ajouter mot clés</h1>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="id">id mot clés</label>
+          <input
+            type="text"
+            class="form-control"
+            id="idmotcles"
+            required
+            [(ngModel)]="MotsCles.id"
+            name="idmotcles"
+          />
+        </div>
+        <div class="form-group">
+            <label for="nom">nom</label>
+            <input
+              class="form-control"
+              id="nom"
+              required
+              [(ngModel)]="MotsCles.nom"
+              name="nom"
+            />
+          </div>
+    
+          <button (click)="saveMotsCles()" class="btn btn-success">Submit</button>
+        </div>
+    
+        <div *ngIf="submitted">
+          <h4>Tutorial was submitted successfully!</h4>
+          <button class="btn btn-success" (click)="newMotsCles()">Add</button>
+        </div>
+      </div>
+    </div>   

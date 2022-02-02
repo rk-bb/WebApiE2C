@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title"></h4>
+				<h6 class="card-subtitle"></h6>
+				<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+					<ngb-panel title="Télecharger support">
+						
+						<ng-template ngbPanelContent>
+						
+
+							<div class="container">
+								<form [formGroup]="form" (ngSubmit)="submitUser()">
+							 
+									<!-- Progress Bar -->
+									<div class="progress form-group" *ngIf="progress > 0">
+										<div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width.%]="progress">
+										</div>
+
+									</div>
+									<p><ngb-progressbar type="success" [value]="25" [striped]="true"></ngb-progressbar></p>
+
+									<div class="form-group">
+										<input type="file" #file placeholder="fichier à télécharger" (change)="uploadFile($event)">
+										
+									</div>
+							 
+									<div class="form-group input-group-lg">
+										<input class="form-control" placeholder="Name" formControlName="name">
+									</div>
+							 
+									<div class="form-group">
+										<button class="btn btn-danger btn-block btn-lg">Create</button>
+									</div>
+								</form>
+							</div>
+							  
+							
+								
+								 
+								  
+							 
+						</ng-template>
+					</ngb-panel>
+					
+					
+				</ngb-accordion>
+
+			</div>
+		</div>
+    </div>
+</div>
